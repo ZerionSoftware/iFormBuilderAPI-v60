@@ -5,7 +5,7 @@ work in progress :)
     <li>Start interacting with api quickly (generates access tokens).</li>
     <li>Provides familiar ORM layer for mapping iFormBuidler resources.</li>
     <li>Utilize v60 features</li>
-<ul>
+</ul>
 
 <h2>How to use</h2>
 <p>Must add credentials to Creds/Auth.php and Creds/Profile.php</p>
