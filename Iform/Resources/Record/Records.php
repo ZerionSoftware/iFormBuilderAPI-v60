@@ -134,4 +134,9 @@ class Records extends BaseResource implements BatchQueryMapper, BatchCommandMapp
 
         return $this;
     }
+
+    function __destruct()
+    {
+        unset($this->gateway);  //kill connection
+    }
 }

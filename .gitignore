@@ -8,3 +8,5 @@ Iform/vendor/*
 Iform/testiForm.php
 Test.php
 .htaccess
+Iform/Creds/Auth.php
+Iform/Creds/Profile.php

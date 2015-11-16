@@ -84,4 +84,9 @@ class Profile extends BaseResource implements BatchQueryMapper {
             ? $this->collection->fetchCollection($this->gateway, $this->collectionUrl(), $this->params)
             : $this->gateway->read($this->collectionUrl(), $this->params);
     }
+
+    function __destruct()
+    {
+        unset($this->gateway);  //kill connection
+    }
 }

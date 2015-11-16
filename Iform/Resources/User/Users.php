@@ -166,4 +166,9 @@ class Users extends BaseResource implements BatchQueryMapper, BatchCommandMapper
     {
         $this->gateway = $gateway;
     }
+
+    function __destruct()
+    {
+        unset($this->gateway);  //kill connection
+    }
 }

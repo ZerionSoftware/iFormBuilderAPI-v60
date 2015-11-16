@@ -76,4 +76,9 @@ class OptionLists extends BaseResource implements BatchQueryMapper {
     {
         $this->gateway = $gateway;
     }
+
+    function __destruct()
+    {
+        unset($this->gateway);  //kill connection
+    }
 }

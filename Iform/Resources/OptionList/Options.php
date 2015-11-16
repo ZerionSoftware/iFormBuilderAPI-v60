@@ -112,4 +112,9 @@ class Options extends BaseResource implements BatchQueryMapper, BatchCommandMapp
 
         return $values;
     }
+
+    function __destruct()
+    {
+        unset($this->gateway);  //kill connection
+    }
 }
