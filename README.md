@@ -11,14 +11,10 @@ work in progress :)
 <p>Must add credentials to Creds/Auth.php and Creds/Profile.php</p>
 <pre>
 <code>
-
 require_once 'zerion_autoload.php';
 
 use Iform\Resources\IformResource;
-
 $pageResource = IformResource::page();
-
-
 </code>
 </pre>
 
