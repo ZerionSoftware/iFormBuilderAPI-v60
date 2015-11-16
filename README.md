@@ -1,5 +1,5 @@
 <h2>iFormBuilder api Version 6 (v60)</h2>
-<p>PHP framework to interact with iFormBuilder api v60 resources</p>
+<p>PHP library to interact with iFormBuilder api v60 resources</p>
 work in progress :)
 <ul>
     <li>Start interacting with api quickly (includes generating access tokens).</li>
