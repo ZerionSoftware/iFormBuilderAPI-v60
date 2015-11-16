@@ -10,7 +10,7 @@
 <h2>How to use</h2>
 
 <pre>
-    <?php
+    <code>
 
     require_once 'zerion_autoload.php';
 
@@ -73,5 +73,5 @@
     $pageResource->localizations($pageId)
                  ->update($values);
 
-    ?>
+    </code>
 </pre>
