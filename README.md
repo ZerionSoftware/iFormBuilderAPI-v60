@@ -9,66 +9,31 @@ work in progress :)
 
 <h2>How to use</h2>
 <p>Must add credentials to Creds/Auth.php and Creds/Profile.php</p>
+<p>use zerion_autoload.php.  If using composer, include composer autoload.php</p>
+
 <pre>
 <div>
 require_once 'zerion_autoload.php';
-
 use Iform\Resources\IformResource;
-$pageResource = IformResource::page();
 </div>
 </pre>
-
+<p>Use container to instantiate resources</p>
 <pre>
 <div>
-//return an collection of all pages in profile
-$allPages = $pageResource->fetchAll();
-
-//filter pages by type
-$filteredPages = $pageResource->where('data_type(="7")')->fetchAll();
-
-//require all fields
-$allFields = $pageResource->withAllFields()->fetchAll();
-
-//single
+$pageResource = IformResource::page();
+$optionListResource = IformResource::optionList();
+$profileResource = IformResource::profile();
+$userResource = IformResource::user();
+</div>
+</pre>
+<p>Following will require a parent identifier</p>
+<pre>
+<div>
 $pageId = 123123;
-$page = $pageResource->fetch($pageId);
+$recordResource = IformResource::record($pageId);
+$elementsResource = IformResource::elements($pageId);
 
-//update
-values = ['name' => 'new_test'];
-$pageId = 123123;
-$pageResource->update($pageId, $values);
-
-//create page
-$values = ['name' => 'test', 'label' => 'This is a test'];
-$pageId = $pageResource->create($values);
-
-//delete
-$pageId = 123123;
-$pageResource->delete($pageId);
-
-//fetch email alerts for page
-$pageId = 123123;
-$pageResource->alerts($pageId)->fetchAll();
-
-//fetch callbacks for page
-$pageId = 123123;
-$pageResource->http($pageId)->fetchAll();
-
-//fetch localizations for page
-$pageId = 123123;
-$pageResource->localizations($pageId)->fetchAll();
-
-//fetch assignments for page
-$pageId = 123123;
-$pageResource->assignments($pageId)->fetchAll();
-
-//all methods consist for attributes
-$values = [
-        "language_code"=> "es",
-        "label"=> "inspección de la construcción"
-];
-
-$pageResource->localizations($pageId)->update($values);
-
+$optionListId = 12312345;
+$optionsResource = IformResource::options($optionListId);
 </div>
 </pre>
