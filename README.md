@@ -10,16 +10,16 @@ work in progress :)
 <h2>How to use</h2>
 <p>Must add credentials to Creds/Auth.php and Creds/Profile.php</p>
 <pre>
-<code>
+<div>
 require_once 'zerion_autoload.php';
 
 use Iform\Resources\IformResource;
 $pageResource = IformResource::page();
-</code>
+</div>
 </pre>
 
 <pre>
-<code>
+<div>
 //return an collection of all pages in profile
 $allPages = $pageResource->fetchAll();
 
@@ -70,7 +70,5 @@ $values = [
 
 $pageResource->localizations($pageId)->update($values);
 
-
-
-</code>
+</div>
 </pre>
