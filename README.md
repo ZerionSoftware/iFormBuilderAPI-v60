@@ -71,6 +71,7 @@
     ];
 
     $pageResource->localizations($pageId)
-                ->update($values);
+                 ->update($values);
 
+    ?>
 </pre>
