@@ -1,0 +1,10 @@
+.DS_Store
+.idea/*
+vendor/*
+index.php
+composer.json
+composer.lock
+Iform/vendor/*
+Iform/testiForm.php
+Test.php
+.htaccess
