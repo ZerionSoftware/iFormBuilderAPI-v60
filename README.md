@@ -121,6 +121,6 @@ $values = [
         "label"=> "inspección de la construcción"
 ];
 
-$pageResource->localizations($pageId)->update($values);
+$pageResource->localizations($pageId)->create($values);
 </code>
 </pre>
