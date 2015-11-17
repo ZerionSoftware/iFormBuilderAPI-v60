@@ -11,7 +11,6 @@ interface Auth {
     CONST SECRET = "";
     /**
      * Oauth endpoint:  "https://YOURCOMPANYSERVER.iformbuilder.com/exzact/api/oauth/token"
-
      */
     CONST OAUTH = "";
 }
