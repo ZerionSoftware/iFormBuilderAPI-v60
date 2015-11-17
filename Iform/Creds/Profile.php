@@ -1,7 +1,5 @@
 <?php namespace Iform\Creds;
-
 interface Profile {
-
     /**
      * client id : profile id assigned in api apps
      */
