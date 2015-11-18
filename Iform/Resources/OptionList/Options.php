@@ -12,7 +12,7 @@ class Options extends BaseResource implements BatchQueryMapper, BatchCommandMapp
 
     private static $baseElements = array("id", "key_value", "global_id", "label", "sort_order", "condition_value", "score", "localizations");
 
-    function __construct(RequestHandler $gateway, FullCollection $collection = null, $optId)
+    function __construct(RequestHandler $gateway,  $optId, FullCollection $collection = null)
     {
         $this->setUser();
         $this->setGateway($gateway);

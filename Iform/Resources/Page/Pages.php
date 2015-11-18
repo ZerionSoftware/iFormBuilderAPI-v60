@@ -170,7 +170,7 @@ class Pages extends BaseResource implements BatchQueryMapper, BatchCommandMapper
         if ($this->activeUrl === "") {
             $url = $this->baseUrl;
         } else {
-            if (strpos($this->activeUrl, 'email_alerts') !== false) {
+            if (strpos($this->activeUrl, 'email_alerts') !== false && ! is_null($id)) {
                 throw new InvalidCallException("Email alerts are a collection only resource");
             }
             $url = $this->activeUrl;
