@@ -47,11 +47,12 @@ Use zerion_autoload.php. If using composer, include composer autoload.php
 
 ```php
 require_once 'zerion_autoload.php';
-use Iform\Resources\IformResource;
 ```
 ## Loading resources via container
 
 ```php
+use Iform\Resources\IformResource;
+
 $pageResource = IformResource::page();
 $optionListResource = IformResource::optionList();
 $profileResource = IformResource::profile();
@@ -60,6 +61,8 @@ $userResource = IformResource::user();
 Following will require a parent identifier
 
 ```php
+use Iform\Resources\IformResource;
+
 $pageId = 123123;
 $recordResource = IformResource::record($pageId);
 $elementsResource = IformResource::elements($pageId);
