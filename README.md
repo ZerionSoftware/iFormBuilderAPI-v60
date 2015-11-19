@@ -71,7 +71,33 @@ $optionListId = 12312345;
 $optionsResource = IformResource::options($optionListId);
 ```
 
-##Examples
+##Interacting with API
+single resource methods
+```php
+//single page
+$pageId = 123123;
+$page = $pageResource->fetch($pageId);
+
+//update
+$values = ['name' => 'new_test'];
+$pageResource->update($pageId, $values);
+
+//delete
+$pageResource->delete($pageId);
+
+//create page
+$values = ['name' => 'test', 'label' => 'This is a test'];
+$nid = $pageResource->create($values);
+
+//all methods consist for attributes
+$values = [
+        "language_code"=> "es",
+        "label"=> "inspección de la construcción"
+];
+
+$pageResource->localizations($pageId)->create($values);
+```
+
 ```php
 //return an collection of all pages in profile
 $pageResource->fetchAll();
@@ -81,23 +107,6 @@ $pageResource->where('data_type(="7")')->fetchAll();
 
 //require all fields
 $pageResource->withAllFields()->fetchAll();
-
-//single
-$pageId = 123123;
-$page = $pageResource->fetch($pageId);
-
-//update
-$values = ['name' => 'new_test'];
-$pageId = 123123;
-$pageResource->update($pageId, $values);
-
-//create page
-$values = ['name' => 'test', 'label' => 'This is a test'];
-$pageId = $pageResource->create($values);
-
-//delete
-$pageId = 123123;
-$pageResource->delete($pageId);
 
 //fetch email alerts for page
 $pageId = 123123;
@@ -115,13 +124,6 @@ $pageResource->localizations($pageId)->fetchAll();
 $pageId = 123123;
 $pageResource->assignments($pageId)->fetchAll();
 
-//all methods consist for attributes
-$values = [
-        "language_code"=> "es",
-        "label"=> "inspección de la construcción"
-];
-
-$pageResource->localizations($pageId)->create($values);
 ```
 ---
 
