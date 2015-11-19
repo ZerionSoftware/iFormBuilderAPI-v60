@@ -2,10 +2,9 @@
 
 require_once 'BaseResourceTest.php';
 
-use Iform\Resources\OptionList\Options;
+use Iform\Resources\Profile;
 
-class OptionsTest extends BaseResourceTest {
-
+class ProfileTest extends BaseResourceTest {
     function setUp()
     {
         static::$id = 7777777;

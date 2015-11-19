@@ -96,23 +96,6 @@ class Options extends BaseResource implements BatchQueryMapper, BatchCommandMapp
         $this->gateway = $gateway;
     }
 
-    /**
-     * @param array $values
-     *
-     * @return array
-     * @throws \Exception
-     */
-    private function formatBatch(array $values)
-    {
-        if (isset($values[0])) {
-            if (! is_array($values)) throw new \Exception("invalid batch format");
-        } else {
-            $values = array($values); //new to wrap single call in array
-        }
-
-        return $values;
-    }
-
     function __destruct()
     {
         unset($this->gateway);  //kill connection

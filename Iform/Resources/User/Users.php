@@ -34,7 +34,7 @@ class Users extends BaseResource implements BatchQueryMapper, BatchCommandMapper
      * @var array
      */
     private static $basePage = array('can_collect', 'can_view');
-
+    private static $baseRecord = array("id","page_id","record_id");
     function __construct(RequestHandler $gateway, FullCollection $collection = null)
     {
         $this->setUser();
@@ -71,7 +71,7 @@ class Users extends BaseResource implements BatchQueryMapper, BatchCommandMapper
             if (strpos($this->activeUrl, 'page_assignment')) {
                 $labels = static::$basePage;
             } elseif(strpos($this->activeUrl, 'record_assignments')){
-//                $labels = static::$baseRecord;
+                $labels = static::$baseRecord;
             }
         } else {
             $labels = static::$baseLabel;
@@ -105,9 +105,13 @@ class Users extends BaseResource implements BatchQueryMapper, BatchCommandMapper
     {
         $this->params = $this->combine($params, $this->params);
 
-        return empty($this->params) || $this->getAll
-            ? $this->collection->fetchCollection($this->gateway, $this->collectionUrl(), $this->params)
-            : $this->gateway->read($this->collectionUrl(), $this->params);
+        if (empty($this->params) || ! isset($this->params['limit'])) {
+            $results = $this->collection->fetchCollection($this->gateway, $this->collectionUrl(), $this->params);
+        } else {
+            $results = $this->gateway->read($this->collectionUrl(), $this->params);
+        }
+
+        return $results;
     }
 
     /**
@@ -122,24 +126,6 @@ class Users extends BaseResource implements BatchQueryMapper, BatchCommandMapper
         $values = $this->formatBatch($values);
 
         return $this->gateway->delete($this->collectionUrl(), $values);
-    }
-
-    /**
-     * @param array $values
-     *
-     * @return array
-     * @throws \Exception
-     */
-    private function formatBatch($values)
-    {
-//      NOTE::need make abstract or mixin to remove duplication
-        if (isset($values[0])) {
-            if (! is_array($values[0])) throw new \InvalidArgumentException("invalid batch format");
-        } else {
-            $values = array($values); //new to wrap single call in array
-        }
-
-        return $values;
     }
 
     /**

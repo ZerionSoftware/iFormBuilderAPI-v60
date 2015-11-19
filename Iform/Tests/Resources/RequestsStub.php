@@ -22,7 +22,12 @@ class RequestHandlerStub extends RequestHandler {
     {
         if (! is_null($header)) {
             //simulate a collection response
-            return array('header' => '', 'body' => json_encode([1,2,3]));
+            if ($url === "") {
+                $result = array('error_message' => 'resource not found');
+            } else {
+                $result = [1,2,3];
+            }
+            return array('header' => '', 'body' => json_encode($result));
         }
 
         if (preg_match('/\/localizations\//', $url)) {

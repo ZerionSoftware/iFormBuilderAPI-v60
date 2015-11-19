@@ -70,24 +70,6 @@ class Elements extends BaseResource implements BatchQueryMapper, BatchCommandMap
 
         return $this->gateway->delete($this->collectionUrl(), $values);
     }
-
-    /**
-     * @param array $values
-     *
-     * @return array
-     * @throws \Exception
-     */
-    private function formatBatch($values)
-    {
-        if (isset($values[0])) {
-            if (! is_array($values[0])) throw new \InvalidArgumentException("invalid batch format");
-        } else {
-            $values = array($values); //new to wrap single call in array
-        }
-
-        return $values;
-    }
-
     /**
      * Fetch a collection of pages : default is to return all
      *

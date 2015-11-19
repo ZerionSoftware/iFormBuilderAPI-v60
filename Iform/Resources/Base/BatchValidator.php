@@ -18,16 +18,15 @@ trait BatchValidator {
     }
 
     /**
-     * Format batch commands
      * @param array $values
      *
      * @return array
      * @throws \Exception
      */
-    private function format(array $values)
+    private function formatBatch($values)
     {
         if (isset($values[0])) {
-            if (! is_array($values)) throw new \Exception("invalid batch format");
+            if (! is_array($values[0])) throw new \InvalidArgumentException("invalid batch format");
         } else {
             $values = array($values); //new to wrap single call in array
         }

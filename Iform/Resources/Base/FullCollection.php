@@ -71,11 +71,10 @@ class FullCollection extends BaseCollection {
      */
     private function validate($request)
     {
-        if(! is_array($request)) {
-            $error = $this->decode($request, true);
-            if (isset($error['error_message'])) {
-                throw new \Exception($error['error_message']);
-            }
+        $error = is_array($request) ? $this->decode($request['body'], true) : $this->decode($request, true);
+
+        if (isset($error['error_message'])) {
+            throw new \Exception($error['error_message']);
         }
 
         return true;

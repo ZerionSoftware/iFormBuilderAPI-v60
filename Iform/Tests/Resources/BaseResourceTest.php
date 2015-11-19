@@ -116,7 +116,7 @@ class BaseResourceTest extends \PHPUnit_Framework_TestCase {
     {
         $instance = ucfirst($this->resourceType);
 
-        return ! empty($this->identifier) ? new $instance($dependencies, $this->identifier) : new $instance($dependencies);
+        return $this->identifier !== 0 ? new $instance($dependencies, $this->identifier) : new $instance($dependencies);
     }
 
     function tearDown()
