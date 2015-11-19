@@ -97,26 +97,29 @@ $values = [
 
 $pageResource->localizations($pageId)->create($values);
 ```
-
+collection methods
 ```php
-//return an collection of all pages in profile
+//collection of all pages in profile
 $pageResource->fetchAll();
 
 //filter pages by type
 $pageResource->where('data_type(="7")')->fetchAll();
 
+//return first 25 pages 
+$pageResource->first(25)->fetchAll();
+
 //require all fields
 $pageResource->withAllFields()->fetchAll();
 
-//fetch email alerts for page
+//fetch all email alerts for page
 $pageId = 123123;
 $pageResource->alerts($pageId)->fetchAll();
 
-//fetch callbacks for page
+//fetch all callbacks for page
 $pageId = 123123;
 $pageResource->http($pageId)->fetchAll();
 
-//fetch localizations for page
+//fetch all localizations for page
 $pageId = 123123;
 $pageResource->localizations($pageId)->fetchAll();
 
