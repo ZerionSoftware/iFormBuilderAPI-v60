@@ -74,6 +74,9 @@ $optionsResource = IformResource::options($optionListId);
 ##Interacting with API
 single resource methods
 ```php
+use Iform\Resources\IformResource;
+$pageResource = IformResource::page()
+
 //single page
 $pageId = 123123;
 $page = $pageResource->fetch($pageId);
