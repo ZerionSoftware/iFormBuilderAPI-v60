@@ -1,15 +1,16 @@
-<h2>iFormBuilder api Version 6 (v60)</h2>
-<p>PHP library to interact with iFormBuilder api v60 resources</p>
-work in progress :)
-<ul>
-    <li>Start interacting with api quickly (includes generating access tokens).</li>
-    <li>Provides familiar ORM layer for mapping iFormBuidler resources.</li>
-    <li>Utilize v60 features</li>
-</ul>
+# iFormBuilder api Version 6 (v60)
 
-<h2>How to use</h2>
-<p>Add credentials to Creds/Auth.php interface</p>
-<pre>
+PHP library to interact with iFormBuilder api v60 resources
+* Start interacting with api quickly (includes generating access tokens)
+* Provides familiar ORM layer for mapping iFormBuidler resources
+* Utilize v60 features
+
+## How to use
+
+Add credentials to Auth interfaces
+
+[Auth.php](https://github.com/pixelploy/iformbuilder-api--v60resourceframework/blob/master/Iform/Creds/Auth.php)
+```php
 interface Auth {
     /**
      * client key
@@ -24,13 +25,11 @@ interface Auth {
      */
     CONST OAUTH = "https://yourserver.iformbuilder.com/exzact/api/oauth/token";
 }
-</pre>
+```
+[Profile.php](https://github.com/pixelploy/iformbuilder-api--v60resourceframework/blob/master/Iform/Creds/Profile.php)
 
-<p>Add Profile to Creds/Profile.php interface</p>
-
-<pre>
+```php
 interface Profile {
-
     /**
      * client id : profile id assigned in api apps
      */
@@ -40,39 +39,37 @@ interface Profile {
      */
     CONST SERVER = "https://server.iformbuilder.com/";
 }
+```
 
+## Usage
 
-</pre>
+Use zerion_autoload.php. If using composer, include composer autoload.php
 
-<p>use zerion_autoload.php.  If using composer, include composer autoload.php</p>
-<pre>
+```php
 require_once 'zerion_autoload.php';
 use Iform\Resources\IformResource;
-</pre>
-<p>Use container to instantiate resources</p>
-<pre>
-<div>
+```
+## Loading resources via container
+
+```php
 $pageResource = IformResource::page();
 $optionListResource = IformResource::optionList();
 $profileResource = IformResource::profile();
 $userResource = IformResource::user();
-</div>
-</pre>
-<p>Following will require a parent identifier</p>
-<pre>
-<div>
+```
+Following will require a parent identifier
+
+```php
 $pageId = 123123;
 $recordResource = IformResource::record($pageId);
 $elementsResource = IformResource::elements($pageId);
 
 $optionListId = 12312345;
 $optionsResource = IformResource::options($optionListId);
-</div>
-</pre>
+```
 
-<h2>Examples</h2>
-<pre>
-<code>
+##Examples
+```php
 //return an collection of all pages in profile
 $pageResource->fetchAll();
 
@@ -122,5 +119,6 @@ $values = [
 ];
 
 $pageResource->localizations($pageId)->create($values);
-</code>
-</pre>
+```
+---
+
