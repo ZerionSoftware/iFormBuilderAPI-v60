@@ -5,7 +5,7 @@ PHP library to interact with iFormBuilder api v60 resources
 * Provides familiar ORM layer for mapping iFormBuidler resources
 * Utilize v60 features
 
-## How to use
+## Getting Started
 
 Add credentials to Auth interfaces
 
