@@ -3,9 +3,9 @@ interface Profile {
     /**
      * client id : profile id assigned in api apps
      */
-    CONST ID = "";
+    CONST ID = "111111";
     /**
      * server :  "https://YOURCOMPANYSERVER.iformbuilder.com/"
      */
-    CONST SERVER = "";
+    CONST SERVER = "https://YOURCOMPANYSERVER.iformbuilder.com/";
 }

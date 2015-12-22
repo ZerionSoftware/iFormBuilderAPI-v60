@@ -3,13 +3,13 @@ interface Auth {
     /**
      * client key
      */
-    CONST CLIENT = "";
+    CONST CLIENT = "150505155050";
     /**
      * secret key
      */
-    CONST SECRET = "";
+    CONST SECRET = "efefe002011";
     /**
      * Oauth endpoint:  "https://YOURCOMPANYSERVER.iformbuilder.com/exzact/api/oauth/token"
      */
-    CONST OAUTH = "";
+    CONST OAUTH = "https://YOURCOMPANYSERVER.iformbuilder.com/exzact/api/oauth/token";
 }

@@ -38,10 +38,8 @@ class RequestHandler implements Auth {
      */
     public function create($url, $params = array())
     {
-        $paramsPassed = ! empty($params);
         $this->setupCreate($url);
-
-        if ($paramsPassed) {
+        if (! empty($params)) {
             curl_setopt($this->ch, CURLOPT_POSTFIELDS, json_encode($params));
 
             return $this->execute();
@@ -59,13 +57,11 @@ class RequestHandler implements Auth {
      *
      * @return mixed
      */
-    public function read($url, $params = [], $header = null)
+    public function read($url, $params = array(), $header = null)
     {
-
-        $paramsPassed = ! empty($params);
         $this->init();
         if (! empty($header)) curl_setopt($this->ch, CURLOPT_HEADER, 1);
-        if ($paramsPassed) $url = $url . "?" . http_build_query($params);
+        if (! empty($params)) $url = $url . "?" . http_build_query($params);
         $this->baseCurl($url);
 
         return $this->execute($header);
@@ -79,11 +75,10 @@ class RequestHandler implements Auth {
      *
      * @return $this|mixed
      */
-    public function update($url, $params = [])
+    public function update($url, $params = array())
     {
         $this->setupUpdate($url);
-        $paramsPassed = ! empty($params);
-        if ($paramsPassed) {
+        if (! empty($params)) {
             curl_setopt($this->ch, CURLOPT_POSTFIELDS, json_encode($params));
 
             return $this->execute();
@@ -98,10 +93,14 @@ class RequestHandler implements Auth {
      *
      * @return $this|mixed
      */
-    public function delete($url, $params = [])
+    public function delete($url, $params = array())
     {
         $this->setupDelete($url);
-        $paramsPassed = ! empty($params);
+        if (! empty($params)) {
+            curl_setopt($this->ch, CURLOPT_POSTFIELDS, json_encode($params));
+
+            return $this->execute();
+        }
 
         return $this->execute();
     }
