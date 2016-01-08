@@ -9,7 +9,7 @@ PHP library to interact with iFormBuilder api v60 resources
 
 Add credentials to Auth interfaces
 
-[Auth.php](https://github.com/pixelploy/iformbuilder-api--v60resourceframework/blob/master/Iform/Creds/Auth.php)
+[Auth.php](https://github.com/ZerionSoftware/iFormBuilderAPI-v60/blob/zerion/Iform/Creds/Auth.php)
 ```php
 interface Auth {
     /**
@@ -26,7 +26,7 @@ interface Auth {
     CONST OAUTH = "https://yourserver.iformbuilder.com/exzact/api/oauth/token";
 }
 ```
-[Profile.php](https://github.com/pixelploy/iformbuilder-api--v60resourceframework/blob/master/Iform/Creds/Profile.php)
+[Profile.php](https://github.com/ZerionSoftware/iFormBuilderAPI-v60/blob/zerion/Iform/Creds/Profile.php)
 
 ```php
 interface Profile {
