@@ -1,18 +1,26 @@
-<?php
-
-require_once 'BaseResourceTest.php';
+<?php namespace Iform\Tests\Resources;
 
 use Iform\Resources\Profile;
 
 class ProfileTest extends BaseResourceTest {
+
     function setUp()
     {
-        static::$id = 7777777;
-        static::$pattern = "iformbuilder\.com\/exzact\/api\/v60\/profiles\/[0-9]+\/optionlists\/" . static::$id . "\/options";
+        static::$pattern = "iformbuilder\.com\/exzact\/api\/v60\/profiles";
 
-        $this->setIdentifier(static::$id);
-        $this->setResourceType('Iform\Resources\OptionList\Options');
+        $this->setResourceType('Iform\Resources\Profile\Profile');
         parent::setUp();
+    }
+
+    /**
+     * N/A
+     *
+     * @expectedException \Iform\Exceptions\InvalidCallException
+     * @expectedExceptionMessage Cannot delete profiles through the api
+     */
+    function testDeleteCommand()
+    {
+        $this->resource->delete(1);
     }
 
     function tearDown()

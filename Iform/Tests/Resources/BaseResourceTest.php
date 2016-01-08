@@ -1,11 +1,8 @@
-<?php
+<?php namespace Iform\Tests\Resources;
 
 use \Mockery as m;
-use Iform\Tests\Resources\RequestHandlerStub;
-use Iform\Tests\Resources\TokenResolverStub;
-
-require_once 'RequestsStub.php';
-
+use Iform\Tests\Mocks\RequestHandlerStub;
+use Iform\Tests\Mocks\TokenResolverStub;
 
 /**
  * Class BaseResourceTest

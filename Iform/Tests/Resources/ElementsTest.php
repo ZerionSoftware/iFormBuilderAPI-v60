@@ -1,12 +1,9 @@
-<?php
-require_once 'BaseResourceTest.php';
+<?php namespace Iform\Tests\Resources;
 
 use Iform\Resources\Element\Elements;
+use Iform\Tests\Resources\BaseResourceTest;
 
 class ElementsTest extends BaseResourceTest {
-
-    private static $pattern = "";
-    private static $id = 0;
 
     function setUp()
     {
@@ -62,15 +59,17 @@ class ElementsTest extends BaseResourceTest {
 
     public function testFetchAll()
     {
-        $response = json_decode($this->resource->fetchAll(), true);
+        $resource = $this->instantiate($this->stub);
+        $response = $resource->fetchAll();
         //collection queries should be array
-        $this->assertEquals(3, count($response));
+        $this->assertInternalType('array', json_decode($response, true));
     }
 
     public function testLocalizationsFetch()
     {
-        $response = $this->resource->localizations(static::$id)
-                                   ->fetch('es');
+        $resource = $this->instantiate($this->stub);
+        $response = $resource->localizations(static::$id)
+                             ->fetch('es');
 
         $this->assertArrayHasKey('language_code', json_decode($response, true));
     }

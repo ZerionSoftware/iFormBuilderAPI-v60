@@ -26,6 +26,11 @@ class IformResource {
     private static $handler = null;
 
     /**
+     * object pool
+     * @var array
+     */
+    private static $pool = [];
+    /**
      * share gateway
      */
     public static function setup()
@@ -33,26 +38,46 @@ class IformResource {
         static::$handler = static::$handler ?: new RequestHandler(new TokenResolver());
     }
 
+    private static function getObject($key, $identifier = null)
+    {
+        if (! array_key_exists($key, static::$pool)) {
+            $className = ucfirst($key);
+            static::setup();
+            static::$pool[$key] = new $className(static::$handler);
+        }
+
+        if (! is_null($identifier)) {
+            $clone = clone(static::$pool[$key]);
+            //TODO:: clear object with existing identifier
+            if (method_exists($clone, 'setIdentifier')) {
+                $clone->setIdentifier($identifier);
+            }
+            static::$pool[$key] = $clone;
+        }
+
+        return static::$pool[$key];
+    }
+
     /**
      * Page instance
      *
      * @return Pages
      */
-    public static function page()
+    public static function pages()
     {
         static::setup();
 
         return new Pages(static::$handler);
     }
 
-    public static function record($pageId)
+    public static function records($pageId)
     {
         static::setup();
 
         return new Records(static::$handler, $pageId);
     }
 
-    public static function optionList()
+    public static function optionLists()
     {
         static::setup();
 
@@ -66,7 +91,7 @@ class IformResource {
         return new Options(static::$handler, $optId);
     }
 
-    public static function user()
+    public static function users()
     {
         static::setup();
 

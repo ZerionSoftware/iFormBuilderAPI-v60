@@ -1,20 +1,6 @@
-<?php namespace Iform\Tests\Resources;
+<?php namespace Iform\Tests\Mocks;
 
 use Iform\Resolvers\RequestHandler;
-use Iform\Resolvers\TokenResolver;
-
-class TokenResolverStub extends TokenResolver {
-
-    function __constructor()
-    {
-        return false;
-    }
-
-    function getToken()
-    {
-        return false;
-    }
-}
 
 class RequestHandlerStub extends RequestHandler {
 

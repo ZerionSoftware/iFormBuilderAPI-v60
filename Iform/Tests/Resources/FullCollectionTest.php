@@ -1,25 +1,24 @@
-<?php namespace Iform\Tests;
+<?php namespace Iform\Tests\Resources;
 
-require_once 'Resources/RequestsStub.php';
-
+use Iform\Tests\Mocks\RequestHandlerStub;
+use Iform\Tests\Mocks\TokenResolverStub;
 use Iform\Resources\Base\FullCollection;
-use Iform\Tests\Resources\RequestHandlerStub;
-use Iform\Tests\Resources\TokenResolverStub;
 
 class FullCollectionTest extends \PHPUnit_Framework_TestCase {
 
-    private $stub;
     private $instance;
+    private $stub;
 
     function setUp()
     {
-        $this->stub = new RequestHandlerStub(new TokenResolverStub());
         $this->instance = new FullCollection();
+        $this->stub = new RequestHandlerStub(new TokenResolverStub());
     }
 
     public function testFetchCollection()
     {
         $response = $this->instance->fetchCollection($this->stub, "iformbuilder.com");
+
         $this->assertJson($response);
     }
 

@@ -1,6 +1,4 @@
-<?php
-
-require_once 'BaseResourceTest.php';
+<?php namespace Iform\Tests\Resources;
 
 use Iform\Resources\User;
 

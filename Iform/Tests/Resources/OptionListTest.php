@@ -1,4 +1,4 @@
-<?php
+<?php namespace Iform\Tests\Resources;
 
 require_once 'BaseResourceTest.php';
 
@@ -13,6 +13,11 @@ class OptionListTest extends BaseResourceTest {
 
         $this->setResourceType('Iform\Resources\OptionList\OptionLists');
         parent::setUp();
+    }
+
+    function tearDown()
+    {
+        parent::tearDown();
     }
 
 }
