@@ -1,0 +1,12 @@
+label,key_value,condition_value,sort_order
+yes,yes,false ,0
+NO,no,driver_name==1 || driver_skill==5,1
+test 1,test_1,false ,2
+afef,test_2,false ,3
+yefefewfs,test_3,afef == 0 || afef == 1,4
+dfsafs’s,test_4,false ,5
+yeefefefs,test_5,test == 4,6
+efef,test_6,false ,7
+yesfdsaf,test_7,false ,8
+rotteef,test_8,"((data_column_name & parseInt(""00001"", 2)) == parseInt(""00001"", 2 )) ",9
+yeasfs,test_9,false ,10

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Applications/MAMP/htdocs/ResourceFrameworkInternal/Iform/Resources/Base</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/Applications/MAMP/htdocs/ResourceFrameworkInternal/Iform/Resources</a></li>
+        <li><a href="index.html">Base</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="FullCollection.php.html#6">FullCollection</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#13">BaseResource</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#3">BaseParameter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseCollection.php.html#3">BaseCollection</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BaseResource.php.html#13">BaseResource</a></td><td class="text-right">1406</td></tr>
+       <tr><td><a href="FullCollection.php.html#6">FullCollection</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="BaseParameter.php.html#3">BaseParameter</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="BaseCollection.php.html#3">BaseCollection</a></td><td class="text-right">90</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BaseResource.php.html#187"><abbr title="BaseResource::getSingleUrl">getSingleUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#203"><abbr title="BaseResource::getResponseBodyCount">getResponseBodyCount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#208"><abbr title="BaseResource::withAllFields">withAllFields</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#175"><abbr title="BaseResource::collectionUrl">collectionUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#163"><abbr title="BaseResource::setUser">setUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#121"><abbr title="BaseResource::fetchAll">fetchAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#140"><abbr title="BaseResource::hasFilterGrammar">hasFilterGrammar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#150"><abbr title="BaseResource::isFiltered">isFiltered</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#219"><abbr title="BaseResource::getFormattedBatchParams">getFormattedBatchParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#234"><abbr title="BaseResource::inEndpoint">inEndpoint</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FullCollection.php.html#124"><abbr title="FullCollection::getCountFromHeader">getCountFromHeader</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FullCollection.php.html#136"><abbr title="FullCollection::validate">validate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FullCollection.php.html#150"><abbr title="FullCollection::reset">reset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FullCollection.php.html#119"><abbr title="FullCollection::setLimit">setLimit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FullCollection.php.html#99"><abbr title="FullCollection::fetchIncrement">fetchIncrement</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BatchValidator.php.html#13"><abbr title="BatchValidator::combine">combine</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FullCollection.php.html#36"><abbr title="FullCollection::fetchCollection">fetchCollection</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="FullCollection.php.html#68"><abbr title="FullCollection::fetchLastInCollection">fetchLastInCollection</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#116"><abbr title="BaseResource::copy">copy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#111"><abbr title="BaseResource::fetch">fetch</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#36"><abbr title="BaseParameter::element">element</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#86"><abbr title="BaseParameter::user">user</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#101"><abbr title="BaseParameter::profile">profile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#5"><abbr title="BaseParameter::page">page</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseCollection.php.html#64"><abbr title="BaseCollection::notEmpty">notEmpty</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseCollection.php.html#26"><abbr title="BaseCollection::decode">decode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseCollection.php.html#36"><abbr title="BaseCollection::encode">encode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseCollection.php.html#50"><abbr title="BaseCollection::figureLimit">figureLimit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#128"><abbr title="BaseParameter::userGroup">userGroup</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#140"><abbr title="BaseParameter::option">option</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#96"><abbr title="BaseResource::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#101"><abbr title="BaseResource::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#106"><abbr title="BaseResource::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#89"><abbr title="BaseResource::where">where</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#81"><abbr title="BaseResource::next">next</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseParameter.php.html#157"><abbr title="BaseParameter::optionList">optionList</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#66"><abbr title="BaseResource::first">first</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseResource.php.html#73"><abbr title="BaseResource::last">last</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BaseCollection.php.html#12"><abbr title="BaseCollection::getTotalDataCount">getTotalDataCount</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BaseResource.php.html#140"><abbr title="BaseResource::hasFilterGrammar">hasFilterGrammar</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="FullCollection.php.html#36"><abbr title="FullCollection::fetchCollection">fetchCollection</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="FullCollection.php.html#68"><abbr title="FullCollection::fetchLastInCollection">fetchLastInCollection</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="BaseResource.php.html#121"><abbr title="BaseResource::fetchAll">fetchAll</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="BaseCollection.php.html#64"><abbr title="BaseCollection::notEmpty">notEmpty</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="BaseResource.php.html#187"><abbr title="BaseResource::getSingleUrl">getSingleUrl</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="BaseResource.php.html#150"><abbr title="BaseResource::isFiltered">isFiltered</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="BaseResource.php.html#219"><abbr title="BaseResource::getFormattedBatchParams">getFormattedBatchParams</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="FullCollection.php.html#136"><abbr title="FullCollection::validate">validate</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="BatchValidator.php.html#13"><abbr title="BatchValidator::combine">combine</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="FullCollection.php.html#99"><abbr title="FullCollection::fetchIncrement">fetchIncrement</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="BaseResource.php.html#175"><abbr title="BaseResource::collectionUrl">collectionUrl</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="BaseParameter.php.html#5"><abbr title="BaseParameter::page">page</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="BaseParameter.php.html#36"><abbr title="BaseParameter::element">element</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="BaseParameter.php.html#140"><abbr title="BaseParameter::option">option</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="BaseCollection.php.html#50"><abbr title="BaseCollection::figureLimit">figureLimit</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="BaseResource.php.html#208"><abbr title="BaseResource::withAllFields">withAllFields</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.4</a> using <a href="http://php.net/" target="_top">PHP 5.6.24</a> and <a href="http://phpunit.de/">PHPUnit 4.8.9</a> at Mon Aug 29 20:57:52 UTC 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([4,0,0,0,0,0,0,0,0,0,1,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([39,0,0,0,0,0,0,0,0,0,0,10], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,9,"<a href=\"BaseCollection.php.html#3\">BaseCollection<\/a>"],[0,10,"<a href=\"BaseParameter.php.html#3\">BaseParameter<\/a>"],[0,37,"<a href=\"BaseResource.php.html#13\">BaseResource<\/a>"],[95.238095238095,19,"<a href=\"BatchValidator.php.html#3\">BatchValidator<\/a>"],[0,16,"<a href=\"FullCollection.php.html#6\">FullCollection<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"BaseCollection.php.html#12\">BaseCollection::getTotalDataCount<\/a>"],[0,1,"<a href=\"BaseCollection.php.html#26\">BaseCollection::decode<\/a>"],[0,1,"<a href=\"BaseCollection.php.html#36\">BaseCollection::encode<\/a>"],[0,2,"<a href=\"BaseCollection.php.html#50\">BaseCollection::figureLimit<\/a>"],[0,4,"<a href=\"BaseCollection.php.html#64\">BaseCollection::notEmpty<\/a>"],[0,2,"<a href=\"BaseParameter.php.html#5\">BaseParameter::page<\/a>"],[0,2,"<a href=\"BaseParameter.php.html#36\">BaseParameter::element<\/a>"],[0,1,"<a href=\"BaseParameter.php.html#86\">BaseParameter::user<\/a>"],[0,1,"<a href=\"BaseParameter.php.html#101\">BaseParameter::profile<\/a>"],[0,1,"<a href=\"BaseParameter.php.html#128\">BaseParameter::userGroup<\/a>"],[0,2,"<a href=\"BaseParameter.php.html#140\">BaseParameter::option<\/a>"],[0,1,"<a href=\"BaseParameter.php.html#157\">BaseParameter::optionList<\/a>"],[0,1,"<a href=\"BaseResource.php.html#66\">BaseResource::first<\/a>"],[0,1,"<a href=\"BaseResource.php.html#73\">BaseResource::last<\/a>"],[0,1,"<a href=\"BaseResource.php.html#81\">BaseResource::next<\/a>"],[0,1,"<a href=\"BaseResource.php.html#89\">BaseResource::where<\/a>"],[0,1,"<a href=\"BaseResource.php.html#96\">BaseResource::create<\/a>"],[0,1,"<a href=\"BaseResource.php.html#101\">BaseResource::update<\/a>"],[0,1,"<a href=\"BaseResource.php.html#106\">BaseResource::delete<\/a>"],[0,1,"<a href=\"BaseResource.php.html#111\">BaseResource::fetch<\/a>"],[0,1,"<a href=\"BaseResource.php.html#116\">BaseResource::copy<\/a>"],[0,4,"<a href=\"BaseResource.php.html#121\">BaseResource::fetchAll<\/a>"],[0,4,"<a href=\"BaseResource.php.html#140\">BaseResource::hasFilterGrammar<\/a>"],[0,3,"<a href=\"BaseResource.php.html#150\">BaseResource::isFiltered<\/a>"],[0,1,"<a href=\"BaseResource.php.html#163\">BaseResource::setUser<\/a>"],[0,2,"<a href=\"BaseResource.php.html#175\">BaseResource::collectionUrl<\/a>"],[0,3,"<a href=\"BaseResource.php.html#187\">BaseResource::getSingleUrl<\/a>"],[0,1,"<a href=\"BaseResource.php.html#203\">BaseResource::getResponseBodyCount<\/a>"],[0,2,"<a href=\"BaseResource.php.html#208\">BaseResource::withAllFields<\/a>"],[0,3,"<a href=\"BaseResource.php.html#219\">BaseResource::getFormattedBatchParams<\/a>"],[0,1,"<a href=\"BaseResource.php.html#234\">BaseResource::inEndpoint<\/a>"],[100,1,"<a href=\"BaseResource.php.html#239\">BaseResource::reset<\/a>"],[100,1,"<a href=\"BaseResource.php.html#248\">BaseResource::setGateway<\/a>"],[100,1,"<a href=\"BaseResource.php.html#257\">BaseResource::setBaseUrl<\/a>"],[100,1,"<a href=\"BaseResource.php.html#264\">BaseResource::getAllFields<\/a>"],[0,2,"<a href=\"BatchValidator.php.html#13\">BatchValidator::combine<\/a>"],[100,3,"<a href=\"BatchValidator.php.html#26\">BatchValidator::formatBatch<\/a>"],[100,8,"<a href=\"BatchValidator.php.html#37\">BatchValidator::combineWithGrammarFields<\/a>"],[100,2,"<a href=\"BatchValidator.php.html#69\">BatchValidator::findFieldName<\/a>"],[100,1,"<a href=\"BatchValidator.php.html#77\">BatchValidator::getFieldNameIndex<\/a>"],[100,2,"<a href=\"BatchValidator.php.html#82\">BatchValidator::replaceFieldWithGrammar<\/a>"],[100,1,"<a href=\"BatchValidator.php.html#91\">BatchValidator::formatUrlWithHttpParams<\/a>"],[0,4,"<a href=\"FullCollection.php.html#36\">FullCollection::fetchCollection<\/a>"],[0,4,"<a href=\"FullCollection.php.html#68\">FullCollection::fetchLastInCollection<\/a>"],[0,2,"<a href=\"FullCollection.php.html#99\">FullCollection::fetchIncrement<\/a>"],[0,1,"<a href=\"FullCollection.php.html#119\">FullCollection::setLimit<\/a>"],[0,1,"<a href=\"FullCollection.php.html#124\">FullCollection::getCountFromHeader<\/a>"],[0,3,"<a href=\"FullCollection.php.html#136\">FullCollection::validate<\/a>"],[0,1,"<a href=\"FullCollection.php.html#150\">FullCollection::reset<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
