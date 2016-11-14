@@ -3,7 +3,7 @@
 use Iform\Resources\IformResource;
 use Iform\Creds\Config;
 
-class ElementIntegrationTest extends \PHPUnit_Framework_TestCase {
+class OptionIntegrationTest extends \PHPUnit_Framework_TestCase {
 
     public function setUp()
     {
@@ -32,8 +32,8 @@ class ElementIntegrationTest extends \PHPUnit_Framework_TestCase {
 
     public function testValidatesDuplicateSotsPassed()
     {
-        $elements = IformResource::elements(801697);
-        $json = '[{"id": "20620195","sort_order": "0"}, {"id": "20594276","sort_order": "0"}]';
+        $elements = IformResource::options(405538);
+        $json = '[{"id": "269024947","sort_order": "0"}, {"id": "269024950","sort_order": "0"}]';
         $params = json_decode($json, true);
 
         $update = json_decode($elements->updateAll($params), true);
