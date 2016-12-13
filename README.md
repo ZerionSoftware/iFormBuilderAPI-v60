@@ -4,7 +4,7 @@ PHP library to interact with iFormBuilder api v60 resources
 * Start interacting with api quickly (includes generating access tokens)
 * Provides familiar ORM layer for mapping iFormBuidler resources
 * Utilize v60 features
-
+[![Coverage Status](https://coveralls.io/repos/github/ZerionSoftware/iFormBuilderAPI-v60/badge.svg?branch=zerion)](https://coveralls.io/github/ZerionSoftware/iFormBuilderAPI-v60?branch=zerion)
 ## Getting Started
 
 Add credentials to Auth interfaces
