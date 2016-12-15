@@ -26,11 +26,16 @@
         </whitelist>
     </filter>
 
-    <logging>
+   <!--   <logging>
         <log type="coverage-html" target="/Users/zhuoyinie/Documents/iFormBuilder_unittest" charset="UTF-8"
              yui="true" highlight="true"
              lowUpperBound="50" highLowerBound="80"/>
         <log type="testdox-html" target="/Users/zhuoyinie/Documents/iFormBuilder_unittest"/>
     </logging>
+    -->
+    <logging>
+        <log type="coverage-php" target="/Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/build/cov/coverage.cov"/>
+    </logging>
+    
 
 </phpunit>
