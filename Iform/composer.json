@@ -18,8 +18,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Iform\\": "Iform",
-      "Iform\\Tests\\": "Iform\\Tests"
+      "Iform\\": "",
+      "Iform\\Tests\\": "Tests"
     }
   }
 }
