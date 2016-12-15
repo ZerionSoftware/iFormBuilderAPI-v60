@@ -1,5 +1,5 @@
 repo_token: D1piz35JeM9gCkG8FkeO2RRZiUdr6MaVF # should be kept secret!
-service_name: travis-pro # travis-ci or travis-pro
+service_name: jenkins # travis-ci or travis-pro
 
 # for php-coveralls
 coverage_clover: build/logs/clover-*.xml
