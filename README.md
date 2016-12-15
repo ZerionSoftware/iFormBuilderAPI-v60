@@ -1,5 +1,5 @@
 # iFormBuilder api Version 6 (v60)
-[![Coverage Status](https://coveralls.io/repos/github/ZerionSoftware/iFormBuilderAPI-v60/badge.svg?branch=master)](https://coveralls.io/github/ZerionSoftware/iFormBuilderAPI-v60?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ZerionSoftware/iFormBuilderAPI-v60/badge.svg?branch=coveralls_try1)](https://coveralls.io/github/ZerionSoftware/iFormBuilderAPI-v60?branch=coveralls_try1)
 
 PHP library to interact with iFormBuilder api v60 resources
 * Start interacting with api quickly (includes generating access tokens)
