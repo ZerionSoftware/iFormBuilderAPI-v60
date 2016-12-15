@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1481830604">
-  <project timestamp="1481830604">
+<coverage generated="1481836146">
+  <project timestamp="1481836146">
     <package name="Iform\Resources\Base">
       <file name="/Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/Resources/Base/BaseCollection.php">
         <class name="BaseCollection" namespace="Iform\Resources\Base">
