@@ -34,7 +34,7 @@
     </logging>
     -->
     <logging>
-        <log type="coverage-clover" target="/Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/build/build/logs/clover.xml"/>
+        <log type="coverage-clover" target="/Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/build/logs/clover.xml"/>
     </logging>
     
 
