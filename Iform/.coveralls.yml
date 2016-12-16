@@ -1,5 +1,5 @@
 repo_token: D1piz35JeM9gCkG8FkeO2RRZiUdr6MaVF
-service_name: travis-ci
+service_name: jenkins
 
-coverage_clover: build/logs/clover-*.xml
-json_path: build/logs/coveralls-upload.json
+coverage_clover: /Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/build/logs/clover.xml
+json_path: /Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/build/logs/coveralls-upload.json

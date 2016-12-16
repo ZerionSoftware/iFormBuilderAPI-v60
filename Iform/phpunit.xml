@@ -34,7 +34,7 @@
     </logging>
     -->
     <logging>
-        <log type="coverage-php" target="/Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/build/cov/coverage.cov"/>
+        <log type="coverage-clover" target="/Users/zhuoyinie/git/iFormBuilderAPI-v60/Iform/build/logs/clover.xml"/>
     </logging>
     
 
